@@ -1,10 +1,10 @@
 package com.gmail.fb020198.Effects.commands;
 
 import com.gmail.fb020198.Effects.EffectsPlugin;
+import com.gmail.fb020198.Effects.utils.CustomCommand;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -13,7 +13,7 @@ import org.bukkit.entity.Player;
  * Made with <3
  * Made by Flo
  */
-public class SpawnPointCommand extends CustomCommand{
+public class SpawnPointCommand extends CustomCommand {
     public static final String SPAWN_CONFIG_NODE = "spawn.";
     public SpawnPointCommand() {
         super("spawnpoint");
@@ -36,7 +36,7 @@ public class SpawnPointCommand extends CustomCommand{
         configuration.set(SPAWN_CONFIG_NODE + "yaw", playerLocation.getYaw());
         configuration.set(SPAWN_CONFIG_NODE + "pitch", playerLocation.getPitch());
         EffectsPlugin.getInstance().saveConfig();
-        EffectsPlugin.getInstance().getPlatForm().setSpawnPoint(playerLocation);
+        EffectsPlugin.getInstance().reloadConfig();
         return true;
     }
 }

@@ -1,4 +1,4 @@
-package com.gmail.fb020198.Effects.commands;
+package com.gmail.fb020198.Effects.utils;
 
 import com.gmail.fb020198.Effects.EffectsPlugin;
 import org.bukkit.command.CommandExecutor;
