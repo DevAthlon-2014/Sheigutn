@@ -1,4 +1,4 @@
-package com.gmail.fb020198.Effects;
+package com.gmail.fb020198.Effects.game;
 
 import com.gmail.fb020198.Effects.utils.TonData;
 import lombok.Getter;

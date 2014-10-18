@@ -1,13 +1,14 @@
 package com.gmail.fb020198.Effects;
 
 import com.gmail.fb020198.Effects.commands.EckPunktCommand;
+import com.gmail.fb020198.Effects.game.Platform;
 import com.gmail.fb020198.Effects.listeners.JoinListener;
+import com.gmail.fb020198.Effects.utils.Gamestate;
 import com.gmail.fb020198.Effects.world.CleanChunkGenerator;
 import lombok.Getter;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.WorldCreator;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Level;
@@ -18,10 +19,13 @@ import java.util.logging.Level;
  */
 public class EffectsPlugin extends JavaPlugin{
 
-    private @Getter Platform platForm;
+    private @Getter
+    Platform platForm;
     private static @Getter EffectsPlugin instance;
     private @Getter boolean started;
     private static final String worldName =  "Platform";
+    private @Getter Gamestate gameState;
+    private @Getter int requiredPlayers;
     @Override
     public void onEnable() {
         instance = this;
@@ -56,5 +60,6 @@ public class EffectsPlugin extends JavaPlugin{
     private void startGame()
     {
         started = true;
+
     }
 }

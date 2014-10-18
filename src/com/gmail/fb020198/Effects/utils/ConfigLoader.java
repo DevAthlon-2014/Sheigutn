@@ -1,5 +1,6 @@
-package com.gmail.fb020198.Effects;
+package com.gmail.fb020198.Effects.utils;
 
+import com.gmail.fb020198.Effects.EffectsPlugin;
 import com.gmail.fb020198.Effects.commands.EckPunktCommand;
 import com.gmail.fb020198.Effects.commands.SpawnPointCommand;
 import org.bukkit.Bukkit;
