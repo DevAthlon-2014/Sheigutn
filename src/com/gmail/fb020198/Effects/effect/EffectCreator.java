@@ -16,6 +16,7 @@ import java.util.List;
 public class EffectCreator {
     /**
      * Erstellt einen linearen Effekt
+     * @param playerList Spieler, die den Effekt sehen sollen
      * @param startLoc Startposition
      * @param endLoc Endposition
      * @param effect Zu anzeigender Effekt
@@ -35,7 +36,15 @@ public class EffectCreator {
         }
     }
 
-
+    /**
+     * Erstellt einen runden Effekt um eine Location herum
+     * @param playerList Spieler, die den Effekt sehen sollen
+     * @param middle Mittelposition
+     * @param effect Zu anzeigender Effekt
+     * @param radius Radius des Kreises
+     * @param lineCount Anzahl der Linien
+     * @param height Höhe der Kreise insgesamt
+     */
     public static void circular(List<Player> playerList, Location middle, WrapperPlayServerWorldParticles.ParticleEffect effect, double radius, double lineCount, double height) {
         double counter = height / (lineCount - 1);
         for (double y = 0; y <= height; y += counter) {
@@ -50,6 +59,15 @@ public class EffectCreator {
         }
     }
 
+    /**
+     * Erstellt einen spiralförmigen Effekt in die Höhe hinauf
+     * @param playerList Spieler, die den Effekt sehen sollen
+     * @param middle Mittelposition
+     * @param effect Zu anzeigender Effekt
+     * @param effectsPerRound Effekte pro Runde
+     * @param radius Radius der Spirale
+     * @param height Höhe der Spirale
+     */
     public static void spiral(List<Player> playerList, Location middle, WrapperPlayServerWorldParticles.ParticleEffect effect, double effectsPerRound, double radius, double height) {
         double deg = 0;
         for (double y = 0; y <= height; y += 0.02) {
@@ -63,6 +81,14 @@ public class EffectCreator {
         }
     }
 
+    /**
+     * Erstellt einen spiralförmigen Effekt, ohne effectsPerRound parameter
+     * @param playerList Spieler, die den Effekt sehen sollen
+     * @param middle Mittelposition
+     * @param effect Zu anzeigender Effekt
+     * @param radius Radius der Spirale
+     * @param height Höhe der Spirale
+     */
     public static void spiral(List<Player> playerList, Location middle, WrapperPlayServerWorldParticles.ParticleEffect effect, double radius, double height) {
         double deg = 0;
         for (double y = 0; y <= height; y += 0.02) {
@@ -78,6 +104,13 @@ public class EffectCreator {
     }
 
     private static final Vector nilVector = new Vector(0,0,0);
+
+    /**
+     *
+     * @param effect Zu anzeigender Effekt
+     * @param loc Position des Effektes
+     * @return Ein Partikel Packet
+     */
     private static WrapperPlayServerWorldParticles createPacket(WrapperPlayServerWorldParticles.ParticleEffect effect, Location loc)
     {
         WrapperPlayServerWorldParticles packet = new WrapperPlayServerWorldParticles();
