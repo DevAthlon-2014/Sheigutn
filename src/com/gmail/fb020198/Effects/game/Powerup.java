@@ -18,12 +18,15 @@ import java.util.function.Consumer;
  * Made by Flo
  */
 public enum Powerup {
-    SPEED(player -> player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 3, 2))),
-    INVISIBILITY(player -> player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 3, 1))),
+    SPEED(player -> player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 3 * 20, 2))),
+    INVISIBILITY(player -> player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 3 * 20, 1))),
     STICK(player ->{
         ItemStack item = new ItemStack(Material.STICK);
         item.addUnsafeEnchantment(Enchantment.KNOCKBACK, 2);
-        Bukkit.getScheduler().scheduleSyncDelayedTask(EffectsPlugin.getInstance(), () -> player.getInventory().removeItem(item));
+        player.getInventory().addItem(item);
+        player.updateInventory();
+        Bukkit.getScheduler().scheduleSyncDelayedTask(EffectsPlugin.getInstance(), () -> {
+            player.getInventory().remove(Material.STICK); player.updateInventory();}, 3*20L);
     });
 
     private Consumer<Player> consumer;

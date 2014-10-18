@@ -5,10 +5,7 @@ import com.gmail.fb020198.Effects.EffectsPlugin;
 import com.gmail.fb020198.Effects.effect.EffectCreator;
 import com.gmail.fb020198.Effects.utils.Gamestate;
 import lombok.Getter;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.Material;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import static com.comphenix.packetwrapper.WrapperPlayServerWorldParticles.ParticleEffect.*;
 import java.util.*;
@@ -56,7 +53,7 @@ public class Game {
                         List<Location> locList = EffectsPlugin.getInstance().getPlatForm().getBlockList();
                         Location loc = locList.get(RANDOM.nextInt(locList.size()));
                         effectsList.add(loc);
-                        EffectCreator.circular(Arrays.asList(Bukkit.getOnlinePlayers()), loc, HEART, 0.5, 10, 2);
+                        EffectCreator.circular(Arrays.asList(Bukkit.getOnlinePlayers()), loc, WrapperPlayServerWorldParticles.ParticleEffect.HEART, 1, 5, 2);
                     }
             );
         }

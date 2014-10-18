@@ -23,7 +23,7 @@ public class JoinListener extends CustomListener{
             }
         }*/
         ev.getPlayer().teleport(EffectsPlugin.getInstance().getPlatForm().getSpawnPoint());
-        if(Bukkit.getOnlinePlayers().length == EffectsPlugin.getInstance().getRequiredPlayers())
+        if(Bukkit.getOnlinePlayers().length >= EffectsPlugin.getInstance().getRequiredPlayers())
         {
             Game.start();
         }

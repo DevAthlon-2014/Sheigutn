@@ -116,7 +116,7 @@ public class EffectCreator {
         WrapperPlayServerWorldParticles packet = new WrapperPlayServerWorldParticles();
         packet.setLocation(loc);
         packet.setOffset(nilVector);
-        packet.setNumberOfParticles(1);
+        packet.setParticleEffect(effect);
         return packet;
     }
 
