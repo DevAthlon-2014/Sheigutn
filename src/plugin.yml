@@ -1,9 +1,11 @@
+name: PlatformHunting
 author: Sheigutn
 version: 0.0
 main: com.gmail.fb020198.Effects.EffectsPlugin
+depend: [ProtocolLib, PacketWrapper]
 
 commands:
-   eckpunkt:
+   corner:
      usage: /<command>
      description: Eckpunkte setzen
    spawnpoint:

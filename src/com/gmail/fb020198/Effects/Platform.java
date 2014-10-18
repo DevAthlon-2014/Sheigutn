@@ -21,7 +21,7 @@ public class Platform {
     private Location eckPunkt1;
     private Location eckPunkt2;
     private List<Location> blockList = new ArrayList<>();
-    private static final Random RANDOM = new Random(TonData.values().length);
+    private static final Random RANDOM = new Random();
     private Location spawnPoint;
 
     /**
@@ -55,7 +55,10 @@ public class Platform {
                 Location blockLocation = new Location(eckPunkt1.getWorld(), x, eckPunkt1.getBlockY(), z);
                 Block block = blockLocation.getBlock();
                 block.setType(Material.STAINED_CLAY);
-                block.setData(TonData.values()[RANDOM.nextInt()].getMeta());
+                block.setData(
+                        TonData.values()[
+                                RANDOM.nextInt(TonData.values().length)]
+                                .getMeta());
                 blockList.add(blockLocation.add(0, 1, 0));
             }
         }

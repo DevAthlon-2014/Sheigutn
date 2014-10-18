@@ -15,4 +15,5 @@ public class CleanBlockPopulator extends BlockPopulator {
     public void populate(World world, Random random, Chunk chunk) {
 
     }
+
 }

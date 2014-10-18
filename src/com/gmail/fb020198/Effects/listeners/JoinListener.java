@@ -1,6 +1,7 @@
 package com.gmail.fb020198.Effects.listeners;
 
 import com.gmail.fb020198.Effects.EffectsPlugin;
+import com.gmail.fb020198.Effects.utils.CustomListener;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
 
@@ -8,7 +9,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
  * Made with <3
  * Made by Flo
  */
-public class JoinListener {
+public class JoinListener extends CustomListener{
     @EventHandler
     public void onJoin(PlayerJoinEvent ev)
     {

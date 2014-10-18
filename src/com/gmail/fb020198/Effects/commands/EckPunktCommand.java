@@ -31,7 +31,10 @@ public class EckPunktCommand extends CustomCommand {
             return true;
         }
         Player player = (Player) commandSender;
-        if(args.length != 1) player.sendMessage(ChatColor.RED + "Verwendung: /corner 1|2");
+        if(args.length != 1){
+            player.sendMessage(ChatColor.RED + "Verwendung: /corner 1|2");
+            return true;
+        }
         FileConfiguration configuration = EffectsPlugin.getInstance().getConfig();
         String CONFIG_NODE;
         switch(args[0])

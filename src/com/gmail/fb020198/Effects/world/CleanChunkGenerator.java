@@ -6,6 +6,7 @@ import org.bukkit.generator.ChunkGenerator;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Made with <3
@@ -16,4 +17,11 @@ public class CleanChunkGenerator extends ChunkGenerator {
     public List<BlockPopulator> getDefaultPopulators(World world) {
         return Arrays.asList(new CleanBlockPopulator());
     }
+
+    @Override
+    public byte[][] generateBlockSections(World world, Random random, int x, int z, BiomeGrid biomes) {
+        byte[][] result = new byte[world.getMaxHeight() / 16][];
+        return result;
+    }
+
 }

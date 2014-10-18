@@ -1,5 +1,7 @@
 package com.gmail.fb020198.Effects;
 
+import com.gmail.fb020198.Effects.commands.EckPunktCommand;
+import com.gmail.fb020198.Effects.listeners.JoinListener;
 import com.gmail.fb020198.Effects.world.CleanChunkGenerator;
 import lombok.Getter;
 import org.bukkit.Location;
@@ -39,6 +41,8 @@ public class EffectsPlugin extends JavaPlugin{
         {
             platForm = new Platform(eckPunkt1, eckPunkt2);
             platForm.generate();
+            new JoinListener();
+            new EckPunktCommand();
             startGame(); //TODO
         }
     }
