@@ -52,6 +52,7 @@ public class MoveListener extends CustomListener{
                                             return;
                                         }
                                     }*/
+                                    Bukkit.broadcastMessage("Test");
                                     Game.getSafe().clear();
                                     Bukkit.getScheduler().scheduleSyncDelayedTask(EffectsPlugin.getInstance(), () -> {
                                         Game.createEffects();
