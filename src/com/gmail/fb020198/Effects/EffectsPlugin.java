@@ -10,7 +10,7 @@ public class EffectsPlugin extends JavaPlugin{
 
     @Override
     public void onEnable() {
-        super.onEnable();
+
     }
 
     @Override

@@ -5,7 +5,7 @@ Repository for Sheigutn
 
 Idee:
 
-Plattform wird generiert
+Es wird zufällig eine Plattform mit verschieden Tonfarben gespawnt
 Spieler werden random auf ihr gespawnt
 Es werden an zufälligen Positionen Effekte generiert
 Powerups gibt es auch
