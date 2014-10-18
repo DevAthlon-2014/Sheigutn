@@ -1,0 +1,11 @@
+author: Sheigutn
+version: 0.0
+main: com.gmail.fb020198.Effects.EffectsPlugin
+
+commands:
+   eckpunkt:
+     usage: /<command>
+     description: Eckpunkte setzen
+   spawnpoint:
+     usage: /<command>
+     description: Spawnpoint setzen

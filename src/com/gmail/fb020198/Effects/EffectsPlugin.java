@@ -18,13 +18,9 @@ public class EffectsPlugin extends JavaPlugin{
     @Override
     public void onEnable() {
         instance = this;
-        Location spawnPoint = ConfigLoader.loadSpawnPoint();
+        //Location spawnPoint = ConfigLoader.loadSpawnPoint();
         Location eckPunkt1 = ConfigLoader.loadEckpunkt1();
         Location eckPunkt2 = ConfigLoader.loadEckpunkt2();
-        if(spawnPoint == null)
-        {
-            getLogger().log(Level.SEVERE, "Fehler beim Loaden des Spawnpoints aufgetreten");
-        }
         if(eckPunkt1 == null)
         {
             getLogger().log(Level.SEVERE, "Fehler beim Loaden des Eckpunktes No1 aufgetreten");
@@ -33,8 +29,9 @@ public class EffectsPlugin extends JavaPlugin{
         {
             getLogger().log(Level.SEVERE, "Fehler beim Loaden des Eckpunktes No2 aufgetreten");
         }
-        if(!(spawnPoint == null && eckPunkt1 == null && eckPunkt2 == null))
+        if(!(eckPunkt1 == null && eckPunkt2 == null))
         {
+            platForm = new Platform()
             startGame(); //TODO
         }
     }
@@ -47,6 +44,6 @@ public class EffectsPlugin extends JavaPlugin{
 
     private void startGame()
     {
-        //TODO
+        Plat
     }
 }
