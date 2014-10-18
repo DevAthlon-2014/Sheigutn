@@ -1,6 +1,7 @@
 package com.gmail.fb020198.Effects.listeners;
 
 import com.gmail.fb020198.Effects.EffectsPlugin;
+import com.gmail.fb020198.Effects.game.Game;
 import com.gmail.fb020198.Effects.utils.CustomListener;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
@@ -24,7 +25,7 @@ public class JoinListener extends CustomListener{
         ev.getPlayer().teleport(EffectsPlugin.getInstance().getPlatForm().getSpawnPoint());
         if(Bukkit.getOnlinePlayers().length == EffectsPlugin.getInstance().getRequiredPlayers())
         {
-            GameStarter.start();
+            Game.start();
         }
     }
 }

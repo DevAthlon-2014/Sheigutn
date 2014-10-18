@@ -2,10 +2,13 @@ package com.gmail.fb020198.Effects;
 
 import com.gmail.fb020198.Effects.commands.EckPunktCommand;
 import com.gmail.fb020198.Effects.game.Platform;
+import com.gmail.fb020198.Effects.listeners.ClickListener;
 import com.gmail.fb020198.Effects.listeners.JoinListener;
+import com.gmail.fb020198.Effects.listeners.MoveListener;
 import com.gmail.fb020198.Effects.utils.Gamestate;
 import com.gmail.fb020198.Effects.world.CleanChunkGenerator;
 import lombok.Getter;
+import lombok.Setter;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.WorldCreator;
@@ -24,8 +27,9 @@ public class EffectsPlugin extends JavaPlugin{
     private static @Getter EffectsPlugin instance;
     private @Getter boolean started;
     private static final String worldName =  "Platform";
-    private @Getter Gamestate gameState;
-    private @Getter int requiredPlayers;
+    private @Getter @Setter
+    Gamestate gameState;
+    private @Getter int requiredPlayers = 2;
     @Override
     public void onEnable() {
         instance = this;
@@ -47,7 +51,8 @@ public class EffectsPlugin extends JavaPlugin{
             platForm.generate();
             new JoinListener();
             new EckPunktCommand();
-            startGame(); //TODO
+            new MoveListener();
+            new ClickListener();
         }
     }
 
@@ -55,11 +60,5 @@ public class EffectsPlugin extends JavaPlugin{
     @Override
     public void onDisable() {
         instance = null;
-    }
-
-    private void startGame()
-    {
-        started = true;
-
     }
 }

@@ -47,7 +47,7 @@ public class Platform {
         spawnPoint = eckPunkt1.clone();
         spawnPoint.setX((minX + maxX) / 2);
         spawnPoint.setZ((minZ + maxZ) / 2);
-        spawnPoint = spawnPoint.add(0, 2, 0);
+        spawnPoint = spawnPoint.add(0, 1, 0);
         for(int x = minX; x < maxX; x++)
         {
             for(int z = minZ; z < maxZ; z++)
