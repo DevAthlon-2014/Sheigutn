@@ -1,5 +1,6 @@
 package com.gmail.fb020198.Effects;
 
+import com.gmail.fb020198.Effects.utils.TonData;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Location;

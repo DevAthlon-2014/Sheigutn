@@ -1,4 +1,4 @@
-package com.gmail.fb020198.Effects;
+package com.gmail.fb020198.Effects.utils;
 
 import lombok.Getter;
 
